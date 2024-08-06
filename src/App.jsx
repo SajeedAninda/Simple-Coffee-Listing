@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import headerImg from "../src/assets/bg-cafe.jpg";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      Hi
+      <div>
+        <img src={headerImg} alt="" />
+        <div>
+          
+        </div>
+      </div>
     </>
   )
 }
