@@ -9,16 +9,16 @@ function App() {
   return (
     <>
       <div className="relative">
-        <img src={headerImg} alt="" />
-        <div className="h-[110vh] w-full bg-[#111315]">
-          <div className="bg-[#1B1D1F] w-[80%] mx-auto px-16 py-16 rounded-xl absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <img className="h-[40vh] lg:h-fit" src={headerImg} alt="" />
+        <div className="h-[380vh] md:h-[230vh] lg:h-[110vh] w-full bg-[#111315]">
+          <div className="bg-[#1B1D1F] w-[92%] md:w-[85%] lg:w-[80%] mx-auto px-16 py-16 rounded-xl absolute left-1/2 top-40 lg:top-1/2 transform -translate-x-1/2 lg:-translate-y-1/2">
             <div className="flex flex-col justify-between items-center gap-4 productsDiv">
               <div className="textDiv flex flex-col justify-between items-center gap-4">
                 <h1 className="text-[32px] font-bold text-white">
                   Our Collection
                 </h1>
 
-                <p className="text-[16px] font-semibold text-[#6F757C] text-center w-[60%]">
+                <p className="text-[16px] font-semibold text-[#6F757C] text-center ;g:w-[60%]">
                   Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.
                 </p>
               </div>
