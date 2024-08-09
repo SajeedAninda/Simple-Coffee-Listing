@@ -18,7 +18,15 @@ const Card = () => {
             {
                 coffeeItems.map((coffee =>
                     <div>
-                        <img className='rounded-2xl object-cover' src={coffee.image} alt="" />
+                        <div className='relative'>
+                            {
+                                coffee.popular === true &&
+                                <div className='bg-[#F6C768] rounded-2xl px-3 py-1 text-[#1B1D1F] text-[10px] absolute top-2 left-2 font-semibold'>
+                                    Popular
+                                </div>
+                            }
+                            <img className='rounded-2xl object-cover' src={coffee.image} alt="" />
+                        </div>
                         <div className='flex justify-between items-center mt-2'>
                             <p className='text-white font-bold text-[16px]'>
                                 {coffee.name}
