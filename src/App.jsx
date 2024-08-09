@@ -9,8 +9,8 @@ function App() {
     <>
       <div className="relative">
         <img src={headerImg} alt="" />
-        <div className="h-[100vh] w-full bg-[#111315]">
-          <div className="bg-[#1B1D1F] w-[80%] mx-auto px-16 py-16 rounded-xl ">
+        <div className="h-[110vh] w-full bg-[#111315]">
+          <div className="bg-[#1B1D1F] w-[80%] mx-auto px-16 py-16 rounded-xl absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="flex flex-col justify-between items-center gap-4 productsDiv">
               <div className="textDiv flex flex-col justify-between items-center gap-4">
                 <h1 className="text-[32px] font-bold text-white">
