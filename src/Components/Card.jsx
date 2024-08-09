@@ -37,17 +37,26 @@ const Card = () => {
                             </p>
                         </div>
 
-                        <div className='flex gap-2 mt-2'>
-                            <img src={starIcon} alt="" />
-                            <div className='flex gap-1'>
-                                <p className='text-white font-bold text-[16px]'>
-                                    {coffee.rating}
-                                </p>
+                        <div className='flex justify-between items-center  mt-2'>
+                            <div className='flex gap-2'>
+                                <img src={starIcon} alt="" />
+                                <div className='flex gap-1'>
+                                    <p className='text-white font-bold text-[16px]'>
+                                        {coffee.rating}
+                                    </p>
 
-                                <p className='text-[#6F757C] font-bold text-[16px]'>
-                                    ({coffee.votes} votes)
-                                </p>
+                                    <p className='text-[#6F757C] font-bold text-[16px]'>
+                                        ({coffee.votes} votes)
+                                    </p>
+                                </div>
                             </div>
+
+                            {
+                                coffee.available === false &&
+                                <p className='text-[#ED735D] font-bold text-[16px]'>
+                                    Sold Out
+                                </p>
+                            }
                         </div>
                     </div>
                 ))
