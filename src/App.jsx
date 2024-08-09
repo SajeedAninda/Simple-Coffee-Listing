@@ -1,9 +1,10 @@
 import "./App.css";
+import { useState } from "react";
 import headerImg from "../src/assets/bg-cafe.jpg";
-import vectorImg from "../src/assets/vector.svg";
 import Card from "./Components/Card";
 
 function App() {
+  const [showAvailable, setShowAvailable] = useState(false);
 
   return (
     <>
@@ -23,22 +24,28 @@ function App() {
               </div>
 
               <div className="flex justify-center items-center gap-8">
-                <button className="bg-transparent hover:bg-[#6F757C] text-white px-3 py-2 rounded-lg font-semibold text-[16px]">
+                <button
+                  className="bg-transparent hover:bg-[#6F757C] text-white px-3 py-2 rounded-lg font-semibold text-[16px]"
+                  onClick={() => setShowAvailable(false)}
+                >
                   All Products
                 </button>
 
-                <button className="bg-transparent hover:bg-[#6F757C] text-white px-3 py-2 rounded-lg font-semibold text-[16px]">
-                  All Products
+                <button
+                  className="bg-transparent hover:bg-[#6F757C] text-white px-3 py-2 rounded-lg font-semibold text-[16px]"
+                  onClick={() => setShowAvailable(true)}
+                >
+                  Available Now
                 </button>
               </div>
 
-              <Card></Card>
+              <Card showAvailable={showAvailable} />
             </div>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
