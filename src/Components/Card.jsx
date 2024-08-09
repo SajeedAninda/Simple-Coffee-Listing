@@ -39,15 +39,36 @@ const Card = () => {
 
                         <div className='flex justify-between items-center  mt-2'>
                             <div className='flex gap-2'>
-                                <img src={starIcon} alt="" />
+                                <div>
+                                    {
+                                        coffee.rating === null ?
+                                            <img src={starEmptyIcon} alt="" />
+                                            :
+                                            <img src={starIcon} alt="" />
+                                    }
+                                </div>
                                 <div className='flex gap-1'>
-                                    <p className='text-white font-bold text-[16px]'>
-                                        {coffee.rating}
-                                    </p>
+                                    {
+                                        coffee.rating === null ?
+                                            <p className='text-[#6F757C] font-bold text-[16px]'>
+                                                No Rating
+                                            </p>
+                                            :
+                                            <p className='text-white font-bold text-[16px]'>
+                                                {coffee.rating}
+                                            </p>
+                                    }
 
-                                    <p className='text-[#6F757C] font-bold text-[16px]'>
-                                        ({coffee.votes} votes)
-                                    </p>
+                                    <div>
+                                        {
+                                            coffee.votes === 0 ?
+                                                ""
+                                                :
+                                                <p className='text-[#6F757C] font-bold text-[16px]'>
+                                                    ({coffee.votes} votes)
+                                                </p>
+                                        }
+                                    </div>
                                 </div>
                             </div>
 
